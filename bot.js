@@ -15,73 +15,6 @@ client.on('ready', () => {
    console.log(`----------------`);
 });
 
-
-client.on('message', message => {
-    if(message.content === '-راتب'){
-        message.channel.send('#daily')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '-مبلغ'){
-        message.channel.send('#credits')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '-ريب'){
-        message.channel.send('#rep')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '-راتب'){
-        message.channel.send('#daily')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '-مبلغ'){
-        message.channel.send('#credits')
-    }
-});
-
-client2.on('message', message => {
-    if(message.content === '-ريب'){
-        message.channel.send('#credits')
-    }
-});
-
-
-
-client.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
-if (message.content === '!spam') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**HAHAHAH**[ " ${x} " ]`)
-          .then(m => {
-            count++;
-          })
-          
-        }
-      }
-});
-
-client2.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
-if (message.content === '!spam') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**HAHAHAH**[ " ${x} " ]`)
-          .then(m => {
-            count++;
-          })
-          
-        }
-      }
-});
-
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -114,5 +47,56 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
   }
  });
 
-client.login(process.env.TOKEN);// لا تغير فيها شيء
-client2.login(process.env.TOKEN2);// لا تغير فيها شيء
+client3..on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+if (command == "s") {
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`ليس لديك صلاحيات`**');
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
+
+client4.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+if (command == "s") {
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`ليس لديك صلاحيات`**');
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
+
+client5.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+if (command == "s") {
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`ليس لديك صلاحيات`**');
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
+
+client.login(process.env.TOKEN);//
+client2.login(process.env.TOKEN2);//
+client3.login(process.env.TOKEN3);//
+client4.login(process.env.TOKEN4);//
+client5.login(process.env.TOKEN5);//

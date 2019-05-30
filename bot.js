@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const client2 = new Discord.Client();
+const client3 = new Discord.Client();
+const client4 = new Discord.Client();
+const client5 = new Discord.Client();
 var prefix = "s";
 
 client.on('ready', () => {
@@ -94,6 +97,8 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
    message.delete()
   }
  });
+
+
 
 client.login(process.env.TOKEN);//
 client2.login(process.env.TOKEN2);//
